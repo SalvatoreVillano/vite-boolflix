@@ -18,8 +18,8 @@ export default {
   },
   methods: {
     getMovie() {
-      let info = { ...store.info }
-      axios.get(store.apiURL, info).then(
+      let apiFull = store.apiURL + store.endPointMovie + store.apiKEY + '&query=' + store.movieName
+      axios.get(apiFull).then(
         (res) => {
           store.movieList = res.data.results
           console.log(store.movieList)
@@ -30,7 +30,6 @@ export default {
     }
   },
   created() {
-    this.getMovie();
   }
 }
 </script>
