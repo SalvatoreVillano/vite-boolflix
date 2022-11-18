@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container text-center ">
         <div class="imgZone">
             <img
                 :src="item.poster_path ? pathImg + item.poster_path : `https://image.tmdb.org/t/p/w185/mkqnkWk3jH6vEEI6W4xbiOvHpNW.jpg`">
