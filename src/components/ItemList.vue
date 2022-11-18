@@ -37,7 +37,6 @@ export default {
     background-color: rgb(95, 94, 94);
 
     .row {
-        flex-wrap: nowrap;
         overflow-x: auto;
 
 

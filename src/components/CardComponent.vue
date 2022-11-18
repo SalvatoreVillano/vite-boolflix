@@ -1,9 +1,13 @@
 <template>
     <div class="container">
-        <div class="imgZone"></div>
-        <img :src="pathImg + item.backdrop_path">
-        <div>{{ item.original_title || item.original_name }}</div>
+        <div class="imgZone">
+            <img
+                :src="item.poster_path ? pathImg + item.poster_path : `https://image.tmdb.org/t/p/w185/mkqnkWk3jH6vEEI6W4xbiOvHpNW.jpg`">
+            <div class="title fw-bold">{{ item.original_title || item.original_name }}</div>
+        </div>
+
         <div> {{ item.title || item.name }}</div>
+        <div> {{ item.original_language }}</div>
         <div>{{ item.vote_average }} </div>
     </div>
 </template>
@@ -16,7 +20,7 @@ export default {
     },
     data() {
         return {
-            pathImg: 'https://image.tmdb.org/t/p/w342',
+            pathImg: 'https://image.tmdb.org/t/p/w185',
 
         }
     }
