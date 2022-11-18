@@ -9,14 +9,14 @@
                 <span>Film</span>
                 <span>Serie</span>
             </div>
-            <form class="row g-2" @submit.prevent="searchMovie">
+            <form class="row g-2" @submit.prevent="search">
                 <div class="col-12">
                     <label class="visually-hidden" for="charactername">Search Movie</label>
                     <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                        placeholder="Search Film/Series" v-model.trim="store.movieName">
+                        placeholder="Search Film/Series" v-model.trim="text">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-danger ms-3" @click="searchMovie">Search</button>
+                    <button type="submit" class="btn btn-danger ms-3">Search</button>
                 </div>
 
             </form>
@@ -31,11 +31,12 @@ export default {
     data() {
         return {
             store,
+            text: ''
         }
     },
     methods: {
-        searchMovie() {
-            this.$emit('filterMovie')
+        search() {
+            store.searchName = this.text;
         }
     }
 }

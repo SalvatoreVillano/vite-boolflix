@@ -6,6 +6,7 @@ export const store = reactive({
     endPointSeries: 'tv',
     apiKEY: '?api_key=3149d91c04c21e8b76d64bc1f5b20957',
     movieList: [],
-    movieName: '',
+    seriesList: [],
+    searchName: '',
     
 });

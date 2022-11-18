@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div>{{ movie.original_title }}</div>
-        <div> {{ movie.title }}</div>
-        <div>{{ movie.vote_average }} </div>
+        <div>{{ item.original_title }}</div>
+        <div> {{ item.title }}</div>
+        <div>{{ item.vote_average }} </div>
     </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
     name: 'CardComponent',
     props: {
-        movie: Object
+        item: Object
     }
 }
 </script>
