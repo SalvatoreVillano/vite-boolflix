@@ -52,6 +52,8 @@ header {
     top: 0;
     background-color: black;
     height: 80px;
+    overflow: hidden;
+
 
     .logoText {
         color: red;
