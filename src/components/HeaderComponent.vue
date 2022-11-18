@@ -1,19 +1,27 @@
 <template>
-    <div class="container p-4 d-flex justify-content-center">
-        <form class="row row-cols-lg-auto g-3 align-items-center" @submit.prevent="searchMovie">
-            <div class="col-12">
-                <label class="visually-hidden" for="charactername">Search Movie</label>
-                <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Search Name"
-                    v-model.trim="store.movieName">
+    <header>
+        <div class="container p-4 d-flex justify-content-between">
+            <div class="logoText">
+                <p class="fs-4 fw-bold">BOOLFIX</p>
             </div>
-
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary" @click="searchMovie">Search</button>
+            <div class="section">
+                <span>Home</span>
+                <span>Film</span>
+                <span>Serie</span>
             </div>
+            <form class="row g-2" @submit.prevent="searchMovie">
+                <div class="col-12">
+                    <label class="visually-hidden" for="charactername">Search Movie</label>
+                    <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                        placeholder="Search Film/Series" v-model.trim="store.movieName">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-danger ms-3" @click="searchMovie">Search</button>
+                </div>
 
-        </form>
-    </div>
+            </form>
+        </div>
+    </header>
 </template>
 
 <script>
@@ -34,5 +42,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+@use '../assets/styles/partials/mixins' as *;
 
+header {
+    @include dflex;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    height: 80px;
+
+    .logoText {
+        color: red;
+    }
+
+    .section {
+
+        @include dflex;
+
+        span {
+            margin-left: 10px;
+            color: white;
+
+
+        }
+    }
+
+    form {
+        @include dflex;
+
+        .form-control {
+            border: 1px solid white;
+            color: red;
+        }
+    }
+}
 </style>
