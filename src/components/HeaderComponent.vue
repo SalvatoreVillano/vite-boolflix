@@ -48,6 +48,7 @@ export default {
 
 header {
     @include dflex;
+    position: sticky;
     top: 0;
     background-color: black;
     height: 80px;
